@@ -23,4 +23,9 @@ public class ContaPoupanca extends Conta{
 	public void updateSaldo() {
 		saldo += saldo * taxaJuro;
 	}
+	
+	@Override // SOBREPOSIÇÃO DO METODO DE SAQUE QUE TEM NA CLASSE CONTA, ESSE NÃO DESCONTO UMA TAXA AO SER SACADO;
+	public void saque(Double quantia ) {
+		saldo-= quantia;
+	}
 }

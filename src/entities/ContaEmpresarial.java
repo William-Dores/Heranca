@@ -9,7 +9,7 @@ public class ContaEmpresarial extends Conta { //HERDANDO OS ATRIBUTOS E METODOS 
 	}
 	
 	public ContaEmpresarial(Integer numConta, String titular, Double saldo, Double limitemEmprestimo) {
-		super(numConta, titular, saldo); // FAZENDO O CHAMANDO DOS ATRIBUTOS DA CLASSE CONTA
+		super(numConta, titular, saldo); // FAZENDO O CHAMADO DOS ATRIBUTOS DA CLASSE CONTA
 		this.limiteEmprestimo = limitemEmprestimo;	
 	}
 
@@ -25,6 +25,12 @@ public class ContaEmpresarial extends Conta { //HERDANDO OS ATRIBUTOS E METODOS 
 		if (quantia <= limiteEmprestimo) {
 			saldo += quantia - 10.0;
 		}
+	}
+	
+	@Override
+	public void saque(Double quantia) {
+		super.saque(quantia); //ESSA PALAVRA "super" REUSA A IMPLEMENTAÇÃO/LÓGICA JÁ EXISTENTE, NESSE CASO O METODO DE SAQUE
+		saldo -= 2.0; // AQUI FAZ O OUTRO JEITO DE SOBREPOR O METODO JÁ EXISTENTE
 	}
 		
 }

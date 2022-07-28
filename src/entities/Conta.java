@@ -34,9 +34,9 @@ public class Conta {
 	public Double getSaldo() {
 		return saldo;
 	}
-	
+	 
 	public void saque(Double quantia) {
-		saldo -= quantia;
+		saldo -= quantia + 5;
 	}
 	
 	public void deposito(Double quantia) {
