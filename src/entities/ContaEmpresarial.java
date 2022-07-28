@@ -28,7 +28,7 @@ public class ContaEmpresarial extends Conta { //HERDANDO OS ATRIBUTOS E METODOS 
 	}
 	
 	@Override
-	public void saque(Double quantia) {
+	public final void saque(Double quantia) {
 		super.saque(quantia); //ESSA PALAVRA "super" REUSA A IMPLEMENTAÇÃO/LÓGICA JÁ EXISTENTE, NESSE CASO O METODO DE SAQUE
 		saldo -= 2.0; // AQUI FAZ O OUTRO JEITO DE SOBREPOR O METODO JÁ EXISTENTE
 	}

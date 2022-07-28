@@ -1,6 +1,6 @@
 package entities;
 
-public class ContaPoupanca extends Conta{
+public final class ContaPoupanca extends Conta{ // A PALAVRA "final" NÃO PERMITE CRIAR UMA SUBCLASSE DA CLASSE JÁ CRIADA E NEM PERMITE REUSAR UM METODO CASO TENHA A PALAVRA "final"
 	private Double taxaJuro;
 	
 	public ContaPoupanca() {

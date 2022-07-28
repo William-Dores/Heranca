@@ -25,6 +25,9 @@ public class Program {
 		ContaEmpresarial contaE = new ContaEmpresarial(1003, "João", 1000.0, 500.0);
 		contaE.saque(200.0);
 		System.out.println("Conta Empresarial : " + contaE.getSaldo());
+		
+		
+		sc.close();
 	}
 
 }
